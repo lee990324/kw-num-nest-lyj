@@ -10,14 +10,21 @@ function avg(numbers) {
     return s / numbers.length;
 }
 
-function prime(numbers) {
-    // TODO
-    return false;
+function prime(num) {
+    if (num < 2) return false;
+    for (let i = 2; i <= num / 2; i++) {
+        if (num % i === 0) return false;
+    }
+    return true;
 }
 
 function factorial(num) {
-    // TODO
-    return -1;
+    if (num < 0) return false;
+    let f = 1;
+    for (let i = 1; i <= num; i++) {
+        f *= i;
+    }
+    return f;
 }
 
 module.exports = {
